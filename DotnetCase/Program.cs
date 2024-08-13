@@ -2,10 +2,19 @@ using DotnetCase.Business;
 using DotnetCase.Data.Contexts;
 using DotnetCase.Data.Models;
 using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Serilog'u yapýlandýr
+Log.Logger = new LoggerConfiguration()
+    .MinimumLevel.Debug()
+    .WriteTo.Console()
+    .WriteTo.File("logs/dotnetcase-{Date}.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Host.UseSerilog(); // Serilog'u kullanmak için yapýlandýrma
 
 ConfigurationManager configuration = builder.Configuration;
 

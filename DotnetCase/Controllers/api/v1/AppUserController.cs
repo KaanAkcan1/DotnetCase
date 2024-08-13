@@ -7,11 +7,13 @@ namespace DotnetCase.API.Controllers.api.v1
     [Route("/api/v1/users")]
     public class AppUserController : ControllerBase
     {
+        private readonly ILogger<ActivityController> _logger;
         private readonly IAppUserService _appUserService;
 
-        public AppUserController(IAppUserService appUserService)
+        public AppUserController(IAppUserService appUserService, ILogger<ActivityController> logger)
         {
             _appUserService = appUserService;
+            _logger = logger;
         }
 
         /// <summary>
@@ -22,9 +24,18 @@ namespace DotnetCase.API.Controllers.api.v1
         [HttpPost("create")]
         public async Task<IActionResult> CreateAsync([FromBody] UserCreateRequest payload)
         {
+            _logger.LogInformation("AppUserController-CreateAsync request worked: {payload}", payload);
+
             var result = await _appUserService.CreateAsync(payload);
 
-            if (!result.Succeeded) return UnprocessableEntity(result);
+            if (!result.Succeeded)
+            {
+                _logger.LogError("This is an error at CreateAsync Service");
+
+                return UnprocessableEntity(result);
+            }
+
+            _logger.LogInformation("CreateAsync Service operation was successfully completed.");
 
             return Ok(result);
         }
@@ -37,9 +48,18 @@ namespace DotnetCase.API.Controllers.api.v1
         [HttpGet("{userId}/activities")]
         public async Task<IActionResult> GetUserActivitiesAsync(string userId)
         {
+            _logger.LogInformation("AppUserController-GetUserActivitiesAsync request worked: {payload}", userId);
+
             var result = await _appUserService.GetUserActivitiesAsync(userId);
 
-            if (!result.Success) return UnprocessableEntity(result);
+            if (!result.Success)
+            {
+                _logger.LogError("This is an error at GetUserActivitiesAsync Service : {message}", result.Message);
+
+                return UnprocessableEntity(result);
+            }
+
+            _logger.LogInformation("GetUserActivitiesAsync Service operation was successfully completed.");
 
             return Ok(result);
         }
