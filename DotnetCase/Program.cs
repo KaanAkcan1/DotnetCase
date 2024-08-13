@@ -7,14 +7,13 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Serilog'u yapýlandýr
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console()
     .WriteTo.File("logs/dotnetcase-{Date}.txt", rollingInterval: RollingInterval.Day)
     .CreateLogger();
 
-builder.Host.UseSerilog(); // Serilog'u kullanmak için yapýlandýrma
+builder.Host.UseSerilog(); 
 
 ConfigurationManager configuration = builder.Configuration;
 
