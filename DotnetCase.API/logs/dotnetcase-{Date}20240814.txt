@@ -556,3 +556,912 @@ WHERE [a].[AppUserId] = @__request_0 AND [a].[StatusId] = 1
 2024-08-14 01:44:47.762 +03:00 [DBG] Disposing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
 2024-08-14 01:44:47.764 +03:00 [DBG] Disposed connection to database '' on server '' (1ms).
 2024-08-14 01:44:47.765 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/v1/users/319869ff-c54b-48c0-98c7-d9b0461cef11/activities - 200 null application/json; charset=utf-8 350.6186ms
+2024-08-14 01:54:32.263 +03:00 [DBG] Registered model binder providers, in the following order: ["Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.TryParseModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider","Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider"]
+2024-08-14 01:54:32.359 +03:00 [DBG] Hosting starting
+2024-08-14 01:54:32.391 +03:00 [INF] User profile is available. Using 'C:\Users\Tulpar\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-14 01:54:32.400 +03:00 [DBG] Reading data from file 'C:\Users\Tulpar\AppData\Local\ASP.NET\DataProtection-Keys\key-2ef13dd2-b074-4f00-8480-fe5ede593a71.xml'.
+2024-08-14 01:54:32.405 +03:00 [DBG] Reading data from file 'C:\Users\Tulpar\AppData\Local\ASP.NET\DataProtection-Keys\key-30bf7231-88e8-4a8d-8f76-3615e23a5710.xml'.
+2024-08-14 01:54:32.407 +03:00 [DBG] Reading data from file 'C:\Users\Tulpar\AppData\Local\ASP.NET\DataProtection-Keys\key-67ca839a-0c12-462a-b807-2f1ae8ae9fb3.xml'.
+2024-08-14 01:54:32.408 +03:00 [DBG] Reading data from file 'C:\Users\Tulpar\AppData\Local\ASP.NET\DataProtection-Keys\key-6de765c8-568b-4a08-83b2-c66248f77059.xml'.
+2024-08-14 01:54:32.410 +03:00 [DBG] Reading data from file 'C:\Users\Tulpar\AppData\Local\ASP.NET\DataProtection-Keys\key-7e819df6-2617-473d-b683-9051a99e4c6c.xml'.
+2024-08-14 01:54:32.411 +03:00 [DBG] Reading data from file 'C:\Users\Tulpar\AppData\Local\ASP.NET\DataProtection-Keys\key-a1590320-65ad-4ddf-b63a-7f2aba4641c4.xml'.
+2024-08-14 01:54:32.411 +03:00 [DBG] Reading data from file 'C:\Users\Tulpar\AppData\Local\ASP.NET\DataProtection-Keys\key-cb1fe0b6-1b88-48e7-b15f-f617ed75526d.xml'.
+2024-08-14 01:54:32.412 +03:00 [DBG] Reading data from file 'C:\Users\Tulpar\AppData\Local\ASP.NET\DataProtection-Keys\key-d821aeb7-f3aa-409b-b334-8e477d5f2f99.xml'.
+2024-08-14 01:54:32.417 +03:00 [DBG] Found key {2ef13dd2-b074-4f00-8480-fe5ede593a71}.
+2024-08-14 01:54:32.421 +03:00 [DBG] Found key {30bf7231-88e8-4a8d-8f76-3615e23a5710}.
+2024-08-14 01:54:32.421 +03:00 [DBG] Found key {67ca839a-0c12-462a-b807-2f1ae8ae9fb3}.
+2024-08-14 01:54:32.422 +03:00 [DBG] Found key {6de765c8-568b-4a08-83b2-c66248f77059}.
+2024-08-14 01:54:32.423 +03:00 [DBG] Found key {7e819df6-2617-473d-b683-9051a99e4c6c}.
+2024-08-14 01:54:32.424 +03:00 [DBG] Found key {a1590320-65ad-4ddf-b63a-7f2aba4641c4}.
+2024-08-14 01:54:32.425 +03:00 [DBG] Found key {cb1fe0b6-1b88-48e7-b15f-f617ed75526d}.
+2024-08-14 01:54:32.426 +03:00 [DBG] Found key {d821aeb7-f3aa-409b-b334-8e477d5f2f99}.
+2024-08-14 01:54:32.431 +03:00 [DBG] Considering key {30bf7231-88e8-4a8d-8f76-3615e23a5710} with expiration date 2024-11-11 13:22:34Z as default key.
+2024-08-14 01:54:32.436 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-14 01:54:32.439 +03:00 [DBG] Decrypting secret element using Windows DPAPI.
+2024-08-14 01:54:32.441 +03:00 [DBG] Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=8.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2024-08-14 01:54:32.447 +03:00 [DBG] Opening CNG algorithm 'AES' from provider 'null' with chaining mode CBC.
+2024-08-14 01:54:32.449 +03:00 [DBG] Opening CNG algorithm 'SHA256' from provider 'null' with HMAC.
+2024-08-14 01:54:32.453 +03:00 [DBG] Using key {30bf7231-88e8-4a8d-8f76-3615e23a5710} as the default key.
+2024-08-14 01:54:32.455 +03:00 [DBG] Key ring with default key {30bf7231-88e8-4a8d-8f76-3615e23a5710} was loaded during application startup.
+2024-08-14 01:54:32.594 +03:00 [WRN] The ASP.NET Core developer certificate is not trusted. For information about trusting the ASP.NET Core developer certificate, see https://aka.ms/aspnet/https-trust-dev-cert.
+2024-08-14 01:54:32.637 +03:00 [INF] Now listening on: https://localhost:7175
+2024-08-14 01:54:32.638 +03:00 [INF] Now listening on: http://localhost:5241
+2024-08-14 01:54:32.639 +03:00 [DBG] Loaded hosting startup assembly DotnetCase.API
+2024-08-14 01:54:32.640 +03:00 [DBG] Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2024-08-14 01:54:32.640 +03:00 [DBG] Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2024-08-14 01:54:32.641 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-14 01:54:32.642 +03:00 [INF] Hosting environment: Development
+2024-08-14 01:54:32.642 +03:00 [INF] Content root path: D:\TULPAR\studio19\case\DotnetCase.API
+2024-08-14 01:54:32.643 +03:00 [DBG] Hosting started
+2024-08-14 01:54:32.801 +03:00 [DBG] Connection id "0HN5RTBIP2IGN" received FIN.
+2024-08-14 01:54:32.801 +03:00 [DBG] Connection id "0HN5RTBIP2IGO" received FIN.
+2024-08-14 01:54:32.807 +03:00 [DBG] Connection id "0HN5RTBIP2IGO" accepted.
+2024-08-14 01:54:32.807 +03:00 [DBG] Connection id "0HN5RTBIP2IGN" accepted.
+2024-08-14 01:54:32.809 +03:00 [DBG] Connection id "0HN5RTBIP2IGO" started.
+2024-08-14 01:54:32.810 +03:00 [DBG] Connection id "0HN5RTBIP2IGN" started.
+2024-08-14 01:54:32.823 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-14 01:54:32.823 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.IO.IOException: Received an unexpected EOF or 0 bytes from the transport stream.
+   at System.Net.Security.SslStream.ReceiveHandshakeFrameAsync[TIOAdapter](CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-14 01:54:32.852 +03:00 [DBG] Connection id "0HN5RTBIP2IGO" stopped.
+2024-08-14 01:54:32.852 +03:00 [DBG] Connection id "0HN5RTBIP2IGN" stopped.
+2024-08-14 01:54:32.854 +03:00 [DBG] Connection id "0HN5RTBIP2IGN" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-14 01:54:32.854 +03:00 [DBG] Connection id "0HN5RTBIP2IGO" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-14 01:54:34.567 +03:00 [DBG] Connection id "0HN5RTBIP2IGP" accepted.
+2024-08-14 01:54:34.569 +03:00 [DBG] Connection id "0HN5RTBIP2IGP" started.
+2024-08-14 01:54:34.594 +03:00 [DBG] Connection id "0HN5RTBIP2IGP" received FIN.
+2024-08-14 01:54:34.595 +03:00 [DBG] Connection id "0HN5RTBIP2IGQ" accepted.
+2024-08-14 01:54:34.602 +03:00 [DBG] Connection id "0HN5RTBIP2IGQ" started.
+2024-08-14 01:54:34.607 +03:00 [DBG] Connection id "0HN5RTBIP2IGQ" received FIN.
+2024-08-14 01:54:34.614 +03:00 [DBG] Connection id "0HN5RTBIP2IGR" accepted.
+2024-08-14 01:54:34.620 +03:00 [DBG] Connection id "0HN5RTBIP2IGR" started.
+2024-08-14 01:54:34.621 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): Sertifikanın işlenmesi sırasında bilinmeyen bira hata oluştu.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-14 01:54:34.621 +03:00 [DBG] Failed to authenticate HTTPS connection.
+System.Security.Authentication.AuthenticationException: Authentication failed, see inner exception.
+ ---> System.ComponentModel.Win32Exception (0x80090327): Sertifikanın işlenmesi sırasında bilinmeyen bira hata oluştu.
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.ForceAuthenticationAsync[TIOAdapter](Boolean receiveFirst, Byte[] reAuthenticationData, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.ProcessAuthenticationWithTelemetryAsync(Boolean isAsync, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Https.Internal.HttpsConnectionMiddleware.OnConnectionAsync(ConnectionContext context)
+2024-08-14 01:54:34.626 +03:00 [DBG] Connection id "0HN5RTBIP2IGP" stopped.
+2024-08-14 01:54:34.628 +03:00 [DBG] Connection id "0HN5RTBIP2IGQ" stopped.
+2024-08-14 01:54:34.628 +03:00 [DBG] Connection id "0HN5RTBIP2IGP" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-14 01:54:34.629 +03:00 [DBG] Connection id "0HN5RTBIP2IGQ" sending FIN because: "The Socket transport's send loop completed gracefully."
+2024-08-14 01:54:34.632 +03:00 [DBG] Connection 0HN5RTBIP2IGR established using the following protocol: "Tls13"
+2024-08-14 01:54:34.685 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7175/swagger - null null
+2024-08-14 01:54:34.827 +03:00 [DBG] Wildcard detected, all requests with hosts will be allowed.
+2024-08-14 01:54:34.845 +03:00 [DBG] No candidates found for the request path '/swagger'
+2024-08-14 01:54:34.846 +03:00 [DBG] Request did not match any endpoints
+2024-08-14 01:54:34.858 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:54:34.872 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/swagger - 301 0 null 192.4105ms
+2024-08-14 01:54:34.887 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7175/swagger/index.html - null null
+2024-08-14 01:54:34.895 +03:00 [DBG] No candidates found for the request path '/swagger/index.html'
+2024-08-14 01:54:34.896 +03:00 [DBG] Request did not match any endpoints
+2024-08-14 01:54:34.901 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:54:34.974 +03:00 [DBG] Response markup is scheduled to include Browser Link script injection.
+2024-08-14 01:54:34.976 +03:00 [DBG] Response markup is scheduled to include browser refresh script injection.
+2024-08-14 01:54:35.003 +03:00 [DBG] Response markup was updated to include Browser Link script injection.
+2024-08-14 01:54:35.004 +03:00 [DBG] Response markup was updated to include browser refresh script injection.
+2024-08-14 01:54:35.005 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/swagger/index.html - 200 null text/html;charset=utf-8 117.998ms
+2024-08-14 01:54:35.150 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7175/swagger/swagger-ui.css - null null
+2024-08-14 01:54:35.152 +03:00 [DBG] No candidates found for the request path '/swagger/swagger-ui.css'
+2024-08-14 01:54:35.153 +03:00 [DBG] Request did not match any endpoints
+2024-08-14 01:54:35.157 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:54:35.160 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7175/swagger/swagger-ui-bundle.js - null null
+2024-08-14 01:54:35.163 +03:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-bundle.js'
+2024-08-14 01:54:35.164 +03:00 [DBG] Request did not match any endpoints
+2024-08-14 01:54:35.165 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:54:35.173 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7175/swagger/swagger-ui-standalone-preset.js - null null
+2024-08-14 01:54:35.181 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_vs/browserLink - null null
+2024-08-14 01:54:35.173 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - null null
+2024-08-14 01:54:35.185 +03:00 [DBG] No candidates found for the request path '/swagger/swagger-ui-standalone-preset.js'
+2024-08-14 01:54:35.195 +03:00 [DBG] Request did not match any endpoints
+2024-08-14 01:54:35.196 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-08-14 01:54:35.197 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:54:35.203 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/swagger/swagger-ui.css - 200 143943 text/css 53.233ms
+2024-08-14 01:54:35.208 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_framework/aspnetcore-browser-refresh.js - 200 13764 application/javascript; charset=utf-8 34.1512ms
+2024-08-14 01:54:35.227 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-08-14 01:54:35.232 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/swagger/swagger-ui-standalone-preset.js - 200 339486 text/javascript 58.3364ms
+2024-08-14 01:54:35.233 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-08-14 01:54:35.237 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/swagger/swagger-ui-bundle.js - 200 1096145 text/javascript 77.1841ms
+2024-08-14 01:54:35.348 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/_vs/browserLink - 200 null text/javascript; charset=UTF-8 166.6188ms
+2024-08-14 01:54:35.423 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7175/swagger/v1/swagger.json - null null
+2024-08-14 01:54:35.426 +03:00 [DBG] No candidates found for the request path '/swagger/v1/swagger.json'
+2024-08-14 01:54:35.427 +03:00 [DBG] Request did not match any endpoints
+2024-08-14 01:54:35.428 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:54:35.537 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 113.8042ms
+2024-08-14 01:54:48.467 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/v1/activities - null null
+2024-08-14 01:54:48.475 +03:00 [DBG] 1 candidate(s) found for the request path '/api/v1/activities'
+2024-08-14 01:54:48.478 +03:00 [DBG] Endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.FindAll (DotnetCase.API)' with route pattern 'api/v1/activities' is valid for the request path '/api/v1/activities'
+2024-08-14 01:54:48.479 +03:00 [DBG] Request matched endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.FindAll (DotnetCase.API)'
+2024-08-14 01:54:48.481 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:54:48.483 +03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-14 01:54:48.485 +03:00 [INF] Executing endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.FindAll (DotnetCase.API)'
+2024-08-14 01:54:48.506 +03:00 [INF] Route matched with {action = "FindAll", controller = "Activity"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult FindAll(DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest) on controller DotnetCase.API.Controllers.api.v1.ActivityController (DotnetCase.API).
+2024-08-14 01:54:48.511 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-14 01:54:48.512 +03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-14 01:54:48.513 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2024-08-14 01:54:48.514 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-14 01:54:48.516 +03:00 [DBG] Execution plan of result filters (in the following order): ["None"]
+2024-08-14 01:54:48.518 +03:00 [DBG] Executing controller factory for controller DotnetCase.API.Controllers.api.v1.ActivityController (DotnetCase.API)
+2024-08-14 01:54:48.605 +03:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2024-08-14 01:54:48.625 +03:00 [DBG] Executed controller factory for controller DotnetCase.API.Controllers.api.v1.ActivityController (DotnetCase.API)
+2024-08-14 01:54:48.636 +03:00 [DBG] Attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest' ...
+2024-08-14 01:54:48.639 +03:00 [DBG] Attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest' using the name '' in request data ...
+2024-08-14 01:54:48.643 +03:00 [DBG] Attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.EarlierThan' of type 'System.String' using the name 'EarlierThan' in request data ...
+2024-08-14 01:54:48.645 +03:00 [DBG] Could not find a value in the request with name 'EarlierThan' for binding property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.EarlierThan' of type 'System.String'.
+2024-08-14 01:54:48.646 +03:00 [DBG] Done attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.EarlierThan' of type 'System.String'.
+2024-08-14 01:54:48.649 +03:00 [DBG] Attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.LaterThan' of type 'System.String' using the name 'LaterThan' in request data ...
+2024-08-14 01:54:48.651 +03:00 [DBG] Could not find a value in the request with name 'LaterThan' for binding property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.LaterThan' of type 'System.String'.
+2024-08-14 01:54:48.653 +03:00 [DBG] Done attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.LaterThan' of type 'System.String'.
+2024-08-14 01:54:48.654 +03:00 [DBG] Attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.UserId' of type 'System.String' using the name 'UserId' in request data ...
+2024-08-14 01:54:48.655 +03:00 [DBG] Could not find a value in the request with name 'UserId' for binding property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.UserId' of type 'System.String'.
+2024-08-14 01:54:48.656 +03:00 [DBG] Done attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.UserId' of type 'System.String'.
+2024-08-14 01:54:48.658 +03:00 [DBG] Attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.ActivityType' of type 'System.String' using the name 'ActivityType' in request data ...
+2024-08-14 01:54:48.659 +03:00 [DBG] Could not find a value in the request with name 'ActivityType' for binding property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.ActivityType' of type 'System.String'.
+2024-08-14 01:54:48.661 +03:00 [DBG] Done attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.ActivityType' of type 'System.String'.
+2024-08-14 01:54:48.662 +03:00 [DBG] Done attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest'.
+2024-08-14 01:54:48.663 +03:00 [DBG] Done attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest'.
+2024-08-14 01:54:48.664 +03:00 [DBG] Attempting to validate the bound parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest' ...
+2024-08-14 01:54:48.669 +03:00 [DBG] Done attempting to validate the bound parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest'.
+2024-08-14 01:54:48.671 +03:00 [INF] ActivityController-FindAll request worked: DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest
+2024-08-14 01:54:49.002 +03:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserRole<Guid>' as the properties are already covered by the index {'UserId', 'RoleId'}.
+2024-08-14 01:54:49.004 +03:00 [DBG] The index {'UserId'} was not created on entity type 'IdentityUserToken<Guid>' as the properties are already covered by the index {'UserId', 'LoginProvider', 'Name'}.
+2024-08-14 01:54:49.230 +03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2024-08-14 01:54:49.274 +03:00 [DBG] Compiling query expression: 
+'DbSet<Activity>()
+    .Where(x => x.StatusId == 1 && Invoke(x => x.StatusId == 1, x))'
+2024-08-14 01:54:49.409 +03:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Activity>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Activity.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Activity.ActivityType (int) Required, 1], [Property: Activity.AppUserId (Guid) Required FK Index, 2], [Property: Activity.CreatedBy (Guid) Required, 3], [Property: Activity.CreatedOn (DateTime) Required, 4], [Property: Activity.Description (string), 5], [Property: Activity.ModifiedBy (Guid) Required, 6], [Property: Activity.ModifiedOn (DateTime) Required, 7], [Property: Activity.StatusId (int) Required, 8] }
+        SELECT a.Id, a.ActivityType, a.AppUserId, a.CreatedBy, a.CreatedOn, a.Description, a.ModifiedBy, a.ModifiedOn, a.StatusId
+        FROM Activities AS a
+        WHERE (a.StatusId == 1) && (a.StatusId == 1)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Activity>, 
+    DotnetCase.Data.Contexts.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)'
+2024-08-14 01:54:49.432 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:54:49.436 +03:00 [DBG] Creating DbConnection.
+2024-08-14 01:54:49.461 +03:00 [DBG] Created DbConnection. (23ms).
+2024-08-14 01:54:49.469 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (34ms).
+2024-08-14 01:54:49.471 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (40ms).
+2024-08-14 01:54:49.474 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:54:49.676 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:54:49.684 +03:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ActivityType], [a].[AppUserId], [a].[CreatedBy], [a].[CreatedOn], [a].[Description], [a].[ModifiedBy], [a].[ModifiedOn], [a].[StatusId]
+FROM [Activities] AS [a]
+WHERE [a].[StatusId] = 1 AND [a].[StatusId] = 1
+2024-08-14 01:54:49.710 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ActivityType], [a].[AppUserId], [a].[CreatedBy], [a].[CreatedOn], [a].[Description], [a].[ModifiedBy], [a].[ModifiedOn], [a].[StatusId]
+FROM [Activities] AS [a]
+WHERE [a].[StatusId] = 1 AND [a].[StatusId] = 1
+2024-08-14 01:54:49.738 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:54:49.763 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:54:49.765 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:54:49.766 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:54:49.768 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:54:49.769 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:54:49.770 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:54:49.771 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:54:49.772 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:54:49.775 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:54:49.780 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 66ms reading results.
+2024-08-14 01:54:49.785 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:54:49.790 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (4ms).
+2024-08-14 01:54:49.793 +03:00 [INF] FindAll Service operation was successfully completed.
+2024-08-14 01:54:49.795 +03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-14 01:54:49.800 +03:00 [DBG] No information found on request to perform content negotiation.
+2024-08-14 01:54:49.801 +03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-14 01:54:49.802 +03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-14 01:54:49.803 +03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-14 01:54:49.805 +03:00 [INF] Executing OkObjectResult, writing value of type 'DotnetCase.Common.Entities.Common.DataResponse`1[[System.Collections.Generic.List`1[[DotnetCase.Data.Models.Activity, DotnetCase.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-14 01:54:49.823 +03:00 [INF] Executed action DotnetCase.API.Controllers.api.v1.ActivityController.FindAll (DotnetCase.API) in 1302.8594ms
+2024-08-14 01:54:49.825 +03:00 [INF] Executed endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.FindAll (DotnetCase.API)'
+2024-08-14 01:54:49.829 +03:00 [DBG] 'ApplicationDbContext' disposed.
+2024-08-14 01:54:49.833 +03:00 [DBG] Disposing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:54:49.836 +03:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2024-08-14 01:54:49.837 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/v1/activities - 200 null application/json; charset=utf-8 1370.4384ms
+2024-08-14 01:55:18.124 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/v1/activities - application/json 104
+2024-08-14 01:55:18.130 +03:00 [DBG] 1 candidate(s) found for the request path '/api/v1/activities'
+2024-08-14 01:55:18.131 +03:00 [DBG] Endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.CreateAsync (DotnetCase.API)' with route pattern 'api/v1/activities' is valid for the request path '/api/v1/activities'
+2024-08-14 01:55:18.133 +03:00 [DBG] Request matched endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.CreateAsync (DotnetCase.API)'
+2024-08-14 01:55:18.134 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:55:18.135 +03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-14 01:55:18.136 +03:00 [DBG] The request has an origin header: 'https://localhost:7175'.
+2024-08-14 01:55:18.137 +03:00 [INF] CORS policy execution successful.
+2024-08-14 01:55:18.138 +03:00 [INF] Executing endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.CreateAsync (DotnetCase.API)'
+2024-08-14 01:55:18.146 +03:00 [INF] Route matched with {action = "Create", controller = "Activity"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateAsync(DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest) on controller DotnetCase.API.Controllers.api.v1.ActivityController (DotnetCase.API).
+2024-08-14 01:55:18.147 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-14 01:55:18.149 +03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-14 01:55:18.151 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2024-08-14 01:55:18.151 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-14 01:55:18.152 +03:00 [DBG] Execution plan of result filters (in the following order): ["None"]
+2024-08-14 01:55:18.153 +03:00 [DBG] Executing controller factory for controller DotnetCase.API.Controllers.api.v1.ActivityController (DotnetCase.API)
+2024-08-14 01:55:18.156 +03:00 [DBG] Executed controller factory for controller DotnetCase.API.Controllers.api.v1.ActivityController (DotnetCase.API)
+2024-08-14 01:55:18.157 +03:00 [DBG] Attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest' ...
+2024-08-14 01:55:18.159 +03:00 [DBG] Attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest' using the name '' in request data ...
+2024-08-14 01:55:18.161 +03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-08-14 01:55:18.166 +03:00 [DBG] Connection id "0HN5RTBIP2IGR", Request id "0HN5RTBIP2IGR:00000013": started reading request body.
+2024-08-14 01:55:18.167 +03:00 [DBG] Connection id "0HN5RTBIP2IGR", Request id "0HN5RTBIP2IGR:00000013": done reading request body.
+2024-08-14 01:55:18.172 +03:00 [DBG] JSON input formatter succeeded, deserializing to type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest'
+2024-08-14 01:55:18.173 +03:00 [DBG] Done attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest'.
+2024-08-14 01:55:18.175 +03:00 [DBG] Done attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest'.
+2024-08-14 01:55:18.175 +03:00 [DBG] Attempting to validate the bound parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest' ...
+2024-08-14 01:55:18.179 +03:00 [DBG] Done attempting to validate the bound parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest'.
+2024-08-14 01:55:18.181 +03:00 [INF] ActivityController-CreateAsync request worked: DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest
+2024-08-14 01:55:18.224 +03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2024-08-14 01:55:18.235 +03:00 [DBG] Compiling query expression: 
+'DbSet<AppUser>()
+    .FirstOrDefault(e => object.Equals(
+        objA: EF.Property<object>(e, "Id"), 
+        objB: __get_Item_0))'
+2024-08-14 01:55:18.260 +03:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<AppUser>(
+    asyncEnumerable: new SingleQueryingEnumerable<AppUser>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: AppUser.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: AppUser.AccessFailedCount (int) Required, 1], [Property: AppUser.ConcurrencyStamp (string) Concurrency, 2], [Property: AppUser.CreatedBy (Guid) Required, 3], [Property: AppUser.CreatedOn (DateTime) Required, 4], [Property: AppUser.Email (string) MaxLength(256), 5], [Property: AppUser.EmailConfirmed (bool) Required, 6], [Property: AppUser.LockoutEnabled (bool) Required, 7], [Property: AppUser.LockoutEnd (DateTimeOffset?), 8], [Property: AppUser.ModifiedBy (Guid) Required, 9], [Property: AppUser.ModifiedOn (DateTime) Required, 10], [Property: AppUser.NormalizedEmail (string) Index MaxLength(256), 11], [Property: AppUser.NormalizedUserName (string) Index MaxLength(256), 12], [Property: AppUser.PasswordHash (string), 13], [Property: AppUser.PhoneNumber (string), 14], [Property: AppUser.PhoneNumberConfirmed (bool) Required, 15], [Property: AppUser.SecurityStamp (string), 16], [Property: AppUser.StatusId (int) Required, 17], [Property: AppUser.TwoFactorEnabled (bool) Required, 18], [Property: AppUser.UserName (string) MaxLength(256), 19] }
+            SELECT TOP(1) a.Id, a.AccessFailedCount, a.ConcurrencyStamp, a.CreatedBy, a.CreatedOn, a.Email, a.EmailConfirmed, a.LockoutEnabled, a.LockoutEnd, a.ModifiedBy, a.ModifiedOn, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.SecurityStamp, a.StatusId, a.TwoFactorEnabled, a.UserName
+            FROM AppUsers AS a
+            WHERE a.Id == @__get_Item_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, AppUser>, 
+        DotnetCase.Data.Contexts.ApplicationDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-08-14 01:55:18.271 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:55:18.271 +03:00 [DBG] Creating DbConnection.
+2024-08-14 01:55:18.272 +03:00 [DBG] Created DbConnection. (0ms).
+2024-08-14 01:55:18.274 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2024-08-14 01:55:18.276 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (5ms).
+2024-08-14 01:55:18.278 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:18.281 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:18.285 +03:00 [DBG] Executing DbCommand [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedBy], [a].[ModifiedOn], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StatusId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AppUsers] AS [a]
+WHERE [a].[Id] = @__get_Item_0
+2024-08-14 01:55:18.315 +03:00 [INF] Executed DbCommand (32ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedBy], [a].[ModifiedOn], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StatusId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AppUsers] AS [a]
+WHERE [a].[Id] = @__get_Item_0
+2024-08-14 01:55:18.340 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'AppUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:55:18.372 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:18.375 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 57ms reading results.
+2024-08-14 01:55:18.378 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:18.379 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (1ms).
+2024-08-14 01:55:18.412 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:55:18.418 +03:00 [DBG] SaveChanges starting for 'ApplicationDbContext'.
+2024-08-14 01:55:18.423 +03:00 [DBG] DetectChanges starting for 'ApplicationDbContext'.
+2024-08-14 01:55:18.441 +03:00 [DBG] DetectChanges completed for 'ApplicationDbContext'.
+2024-08-14 01:55:18.489 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:18.492 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:18.495 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:55:18.496 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2024-08-14 01:55:18.497 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2024-08-14 01:55:18.499 +03:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = Guid), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Activities] ([Id], [ActivityType], [AppUserId], [CreatedBy], [CreatedOn], [Description], [ModifiedBy], [ModifiedOn], [StatusId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2024-08-14 01:55:18.508 +03:00 [INF] Executed DbCommand (9ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = Guid), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Activities] ([Id], [ActivityType], [AppUserId], [CreatedBy], [CreatedOn], [Description], [ModifiedBy], [ModifiedOn], [StatusId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2024-08-14 01:55:18.512 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:18.512 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 2ms reading results.
+2024-08-14 01:55:18.515 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:18.516 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (1ms).
+2024-08-14 01:55:18.525 +03:00 [DBG] An entity of type 'Activity' tracked by 'ApplicationDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:55:18.527 +03:00 [DBG] SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2024-08-14 01:55:18.529 +03:00 [INF] CreateAsync Service operation was successfully completed.
+2024-08-14 01:55:18.532 +03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-14 01:55:18.533 +03:00 [DBG] No information found on request to perform content negotiation.
+2024-08-14 01:55:18.534 +03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-14 01:55:18.535 +03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-14 01:55:18.535 +03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-14 01:55:18.536 +03:00 [INF] Executing OkObjectResult, writing value of type 'DotnetCase.Common.Entities.Common.DataResponse`1[[DotnetCase.Data.Models.Activity, DotnetCase.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-14 01:55:18.538 +03:00 [INF] Executed action DotnetCase.API.Controllers.api.v1.ActivityController.CreateAsync (DotnetCase.API) in 385.3733ms
+2024-08-14 01:55:18.541 +03:00 [INF] Executed endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.CreateAsync (DotnetCase.API)'
+2024-08-14 01:55:18.542 +03:00 [DBG] 'ApplicationDbContext' disposed.
+2024-08-14 01:55:18.543 +03:00 [DBG] Disposing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:18.544 +03:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2024-08-14 01:55:18.546 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/v1/activities - 200 null application/json; charset=utf-8 421.4165ms
+2024-08-14 01:55:30.546 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/v1/activities - application/json 77
+2024-08-14 01:55:30.547 +03:00 [DBG] 1 candidate(s) found for the request path '/api/v1/activities'
+2024-08-14 01:55:30.549 +03:00 [DBG] Endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.CreateAsync (DotnetCase.API)' with route pattern 'api/v1/activities' is valid for the request path '/api/v1/activities'
+2024-08-14 01:55:30.550 +03:00 [DBG] Request matched endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.CreateAsync (DotnetCase.API)'
+2024-08-14 01:55:30.551 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:55:30.551 +03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-14 01:55:30.552 +03:00 [DBG] The request has an origin header: 'https://localhost:7175'.
+2024-08-14 01:55:30.553 +03:00 [INF] CORS policy execution successful.
+2024-08-14 01:55:30.554 +03:00 [INF] Executing endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.CreateAsync (DotnetCase.API)'
+2024-08-14 01:55:30.555 +03:00 [INF] Route matched with {action = "Create", controller = "Activity"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateAsync(DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest) on controller DotnetCase.API.Controllers.api.v1.ActivityController (DotnetCase.API).
+2024-08-14 01:55:30.557 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-14 01:55:30.558 +03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-14 01:55:30.558 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2024-08-14 01:55:30.559 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-14 01:55:30.560 +03:00 [DBG] Execution plan of result filters (in the following order): ["None"]
+2024-08-14 01:55:30.561 +03:00 [DBG] Executing controller factory for controller DotnetCase.API.Controllers.api.v1.ActivityController (DotnetCase.API)
+2024-08-14 01:55:30.570 +03:00 [DBG] Executed controller factory for controller DotnetCase.API.Controllers.api.v1.ActivityController (DotnetCase.API)
+2024-08-14 01:55:30.571 +03:00 [DBG] Attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest' ...
+2024-08-14 01:55:30.572 +03:00 [DBG] Attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest' using the name '' in request data ...
+2024-08-14 01:55:30.573 +03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-08-14 01:55:30.574 +03:00 [DBG] Connection id "0HN5RTBIP2IGR", Request id "0HN5RTBIP2IGR:00000015": started reading request body.
+2024-08-14 01:55:30.575 +03:00 [DBG] Connection id "0HN5RTBIP2IGR", Request id "0HN5RTBIP2IGR:00000015": done reading request body.
+2024-08-14 01:55:30.575 +03:00 [DBG] JSON input formatter succeeded, deserializing to type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest'
+2024-08-14 01:55:30.576 +03:00 [DBG] Done attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest'.
+2024-08-14 01:55:30.577 +03:00 [DBG] Done attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest'.
+2024-08-14 01:55:30.577 +03:00 [DBG] Attempting to validate the bound parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest' ...
+2024-08-14 01:55:30.578 +03:00 [DBG] Done attempting to validate the bound parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest'.
+2024-08-14 01:55:30.578 +03:00 [INF] ActivityController-CreateAsync request worked: DotnetCase.Business.Models.Requests.Activity.ActivityCreateRequest
+2024-08-14 01:55:30.586 +03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2024-08-14 01:55:30.591 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:55:30.592 +03:00 [DBG] Creating DbConnection.
+2024-08-14 01:55:30.592 +03:00 [DBG] Created DbConnection. (0ms).
+2024-08-14 01:55:30.593 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2024-08-14 01:55:30.594 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2024-08-14 01:55:30.595 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:30.596 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:30.597 +03:00 [DBG] Executing DbCommand [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedBy], [a].[ModifiedOn], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StatusId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AppUsers] AS [a]
+WHERE [a].[Id] = @__get_Item_0
+2024-08-14 01:55:30.601 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedBy], [a].[ModifiedOn], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StatusId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AppUsers] AS [a]
+WHERE [a].[Id] = @__get_Item_0
+2024-08-14 01:55:30.603 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'AppUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:55:30.604 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:30.605 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 1ms reading results.
+2024-08-14 01:55:30.605 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:30.607 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (1ms).
+2024-08-14 01:55:30.609 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:55:30.609 +03:00 [DBG] SaveChanges starting for 'ApplicationDbContext'.
+2024-08-14 01:55:30.610 +03:00 [DBG] DetectChanges starting for 'ApplicationDbContext'.
+2024-08-14 01:55:30.611 +03:00 [DBG] DetectChanges completed for 'ApplicationDbContext'.
+2024-08-14 01:55:30.612 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:30.613 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:30.613 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:55:30.614 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-14 01:55:30.616 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2024-08-14 01:55:30.617 +03:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = Guid), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Activities] ([Id], [ActivityType], [AppUserId], [CreatedBy], [CreatedOn], [Description], [ModifiedBy], [ModifiedOn], [StatusId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2024-08-14 01:55:30.619 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (DbType = Guid), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (DbType = Guid), @p7='?' (DbType = DateTime2), @p8='?' (DbType = Int32)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [Activities] ([Id], [ActivityType], [AppUserId], [CreatedBy], [CreatedOn], [Description], [ModifiedBy], [ModifiedOn], [StatusId])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2024-08-14 01:55:30.621 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:30.622 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 0ms reading results.
+2024-08-14 01:55:30.624 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:30.625 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (1ms).
+2024-08-14 01:55:30.626 +03:00 [DBG] An entity of type 'Activity' tracked by 'ApplicationDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:55:30.627 +03:00 [DBG] SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2024-08-14 01:55:30.628 +03:00 [INF] CreateAsync Service operation was successfully completed.
+2024-08-14 01:55:30.629 +03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-14 01:55:30.630 +03:00 [DBG] No information found on request to perform content negotiation.
+2024-08-14 01:55:30.631 +03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-14 01:55:30.632 +03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-14 01:55:30.632 +03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-14 01:55:30.633 +03:00 [INF] Executing OkObjectResult, writing value of type 'DotnetCase.Common.Entities.Common.DataResponse`1[[DotnetCase.Data.Models.Activity, DotnetCase.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2024-08-14 01:55:30.634 +03:00 [INF] Executed action DotnetCase.API.Controllers.api.v1.ActivityController.CreateAsync (DotnetCase.API) in 73.6013ms
+2024-08-14 01:55:30.635 +03:00 [INF] Executed endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.CreateAsync (DotnetCase.API)'
+2024-08-14 01:55:30.636 +03:00 [DBG] 'ApplicationDbContext' disposed.
+2024-08-14 01:55:30.639 +03:00 [DBG] Disposing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:30.641 +03:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2024-08-14 01:55:30.642 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/v1/activities - 200 null application/json; charset=utf-8 97.0427ms
+2024-08-14 01:55:46.960 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/v1/activities?UserId=c404a3ce-1719-4f3d-9f33-e10718167867 - null null
+2024-08-14 01:55:46.962 +03:00 [DBG] 1 candidate(s) found for the request path '/api/v1/activities'
+2024-08-14 01:55:46.963 +03:00 [DBG] Endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.FindAll (DotnetCase.API)' with route pattern 'api/v1/activities' is valid for the request path '/api/v1/activities'
+2024-08-14 01:55:46.965 +03:00 [DBG] Request matched endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.FindAll (DotnetCase.API)'
+2024-08-14 01:55:46.965 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:55:46.966 +03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-14 01:55:46.967 +03:00 [INF] Executing endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.FindAll (DotnetCase.API)'
+2024-08-14 01:55:46.967 +03:00 [INF] Route matched with {action = "FindAll", controller = "Activity"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult FindAll(DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest) on controller DotnetCase.API.Controllers.api.v1.ActivityController (DotnetCase.API).
+2024-08-14 01:55:46.969 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-14 01:55:46.969 +03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-14 01:55:46.970 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2024-08-14 01:55:46.971 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-14 01:55:46.972 +03:00 [DBG] Execution plan of result filters (in the following order): ["None"]
+2024-08-14 01:55:46.974 +03:00 [DBG] Executing controller factory for controller DotnetCase.API.Controllers.api.v1.ActivityController (DotnetCase.API)
+2024-08-14 01:55:46.975 +03:00 [DBG] Executed controller factory for controller DotnetCase.API.Controllers.api.v1.ActivityController (DotnetCase.API)
+2024-08-14 01:55:46.980 +03:00 [DBG] Attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest' ...
+2024-08-14 01:55:46.982 +03:00 [DBG] Attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest' using the name '' in request data ...
+2024-08-14 01:55:46.983 +03:00 [DBG] Attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.EarlierThan' of type 'System.String' using the name 'EarlierThan' in request data ...
+2024-08-14 01:55:46.985 +03:00 [DBG] Could not find a value in the request with name 'EarlierThan' for binding property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.EarlierThan' of type 'System.String'.
+2024-08-14 01:55:46.986 +03:00 [DBG] Done attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.EarlierThan' of type 'System.String'.
+2024-08-14 01:55:46.987 +03:00 [DBG] Attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.LaterThan' of type 'System.String' using the name 'LaterThan' in request data ...
+2024-08-14 01:55:46.988 +03:00 [DBG] Could not find a value in the request with name 'LaterThan' for binding property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.LaterThan' of type 'System.String'.
+2024-08-14 01:55:46.989 +03:00 [DBG] Done attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.LaterThan' of type 'System.String'.
+2024-08-14 01:55:46.990 +03:00 [DBG] Attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.UserId' of type 'System.String' using the name 'UserId' in request data ...
+2024-08-14 01:55:46.992 +03:00 [DBG] Done attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.UserId' of type 'System.String'.
+2024-08-14 01:55:46.993 +03:00 [DBG] Attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.ActivityType' of type 'System.String' using the name 'ActivityType' in request data ...
+2024-08-14 01:55:46.994 +03:00 [DBG] Could not find a value in the request with name 'ActivityType' for binding property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.ActivityType' of type 'System.String'.
+2024-08-14 01:55:46.995 +03:00 [DBG] Done attempting to bind property 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest.ActivityType' of type 'System.String'.
+2024-08-14 01:55:46.995 +03:00 [DBG] Done attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest'.
+2024-08-14 01:55:46.996 +03:00 [DBG] Done attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest'.
+2024-08-14 01:55:46.997 +03:00 [DBG] Attempting to validate the bound parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest' ...
+2024-08-14 01:55:46.998 +03:00 [DBG] Done attempting to validate the bound parameter 'payload' of type 'DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest'.
+2024-08-14 01:55:46.999 +03:00 [INF] ActivityController-FindAll request worked: DotnetCase.Business.Models.Requests.Activity.ActivityFilterRequest
+2024-08-14 01:55:47.000 +03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2024-08-14 01:55:47.002 +03:00 [DBG] Compiling query expression: 
+'DbSet<Activity>()
+    .Where(x => x.StatusId == 1 && Invoke(x => x.AppUserId == __id_0, x) && Invoke(x => x.StatusId == 1, x))'
+2024-08-14 01:55:47.006 +03:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Activity>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Activity.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Activity.ActivityType (int) Required, 1], [Property: Activity.AppUserId (Guid) Required FK Index, 2], [Property: Activity.CreatedBy (Guid) Required, 3], [Property: Activity.CreatedOn (DateTime) Required, 4], [Property: Activity.Description (string), 5], [Property: Activity.ModifiedBy (Guid) Required, 6], [Property: Activity.ModifiedOn (DateTime) Required, 7], [Property: Activity.StatusId (int) Required, 8] }
+        SELECT a.Id, a.ActivityType, a.AppUserId, a.CreatedBy, a.CreatedOn, a.Description, a.ModifiedBy, a.ModifiedOn, a.StatusId
+        FROM Activities AS a
+        WHERE ((a.StatusId == 1) && (a.AppUserId == @__id_0)) && (a.StatusId == 1)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Activity>, 
+    DotnetCase.Data.Contexts.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)'
+2024-08-14 01:55:47.008 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:55:47.009 +03:00 [DBG] Creating DbConnection.
+2024-08-14 01:55:47.009 +03:00 [DBG] Created DbConnection. (0ms).
+2024-08-14 01:55:47.010 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2024-08-14 01:55:47.011 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2024-08-14 01:55:47.011 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:47.012 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:47.013 +03:00 [DBG] Executing DbCommand [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ActivityType], [a].[AppUserId], [a].[CreatedBy], [a].[CreatedOn], [a].[Description], [a].[ModifiedBy], [a].[ModifiedOn], [a].[StatusId]
+FROM [Activities] AS [a]
+WHERE [a].[StatusId] = 1 AND [a].[AppUserId] = @__id_0 AND [a].[StatusId] = 1
+2024-08-14 01:55:47.017 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ActivityType], [a].[AppUserId], [a].[CreatedBy], [a].[CreatedOn], [a].[Description], [a].[ModifiedBy], [a].[ModifiedOn], [a].[StatusId]
+FROM [Activities] AS [a]
+WHERE [a].[StatusId] = 1 AND [a].[AppUserId] = @__id_0 AND [a].[StatusId] = 1
+2024-08-14 01:55:47.018 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:55:47.019 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:55:47.019 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:55:47.020 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:55:47.020 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:55:47.021 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:55:47.023 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:47.024 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 6ms reading results.
+2024-08-14 01:55:47.025 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:47.026 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (0ms).
+2024-08-14 01:55:47.026 +03:00 [INF] FindAll Service operation was successfully completed.
+2024-08-14 01:55:47.027 +03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-14 01:55:47.028 +03:00 [DBG] No information found on request to perform content negotiation.
+2024-08-14 01:55:47.028 +03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-14 01:55:47.029 +03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-14 01:55:47.029 +03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-14 01:55:47.030 +03:00 [INF] Executing OkObjectResult, writing value of type 'DotnetCase.Common.Entities.Common.DataResponse`1[[System.Collections.Generic.List`1[[DotnetCase.Data.Models.Activity, DotnetCase.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-14 01:55:47.031 +03:00 [INF] Executed action DotnetCase.API.Controllers.api.v1.ActivityController.FindAll (DotnetCase.API) in 57.3513ms
+2024-08-14 01:55:47.032 +03:00 [INF] Executed endpoint 'DotnetCase.API.Controllers.api.v1.ActivityController.FindAll (DotnetCase.API)'
+2024-08-14 01:55:47.033 +03:00 [DBG] 'ApplicationDbContext' disposed.
+2024-08-14 01:55:47.034 +03:00 [DBG] Disposing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:55:47.035 +03:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2024-08-14 01:55:47.036 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/v1/activities?UserId=c404a3ce-1719-4f3d-9f33-e10718167867 - 200 null application/json; charset=utf-8 76.1453ms
+2024-08-14 01:56:15.195 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/v1/users/create - application/json 78
+2024-08-14 01:56:15.197 +03:00 [DBG] 1 candidate(s) found for the request path '/api/v1/users/create'
+2024-08-14 01:56:15.198 +03:00 [DBG] Endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.CreateAsync (DotnetCase.API)' with route pattern 'api/v1/users/create' is valid for the request path '/api/v1/users/create'
+2024-08-14 01:56:15.200 +03:00 [DBG] Request matched endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.CreateAsync (DotnetCase.API)'
+2024-08-14 01:56:15.201 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:56:15.201 +03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-14 01:56:15.202 +03:00 [DBG] The request has an origin header: 'https://localhost:7175'.
+2024-08-14 01:56:15.203 +03:00 [INF] CORS policy execution successful.
+2024-08-14 01:56:15.203 +03:00 [INF] Executing endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.CreateAsync (DotnetCase.API)'
+2024-08-14 01:56:15.206 +03:00 [INF] Route matched with {action = "Create", controller = "AppUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateAsync(DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest) on controller DotnetCase.API.Controllers.api.v1.AppUserController (DotnetCase.API).
+2024-08-14 01:56:15.208 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-14 01:56:15.209 +03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-14 01:56:15.210 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2024-08-14 01:56:15.211 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-14 01:56:15.211 +03:00 [DBG] Execution plan of result filters (in the following order): ["None"]
+2024-08-14 01:56:15.213 +03:00 [DBG] Executing controller factory for controller DotnetCase.API.Controllers.api.v1.AppUserController (DotnetCase.API)
+2024-08-14 01:56:15.215 +03:00 [DBG] Executed controller factory for controller DotnetCase.API.Controllers.api.v1.AppUserController (DotnetCase.API)
+2024-08-14 01:56:15.216 +03:00 [DBG] Attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest' ...
+2024-08-14 01:56:15.217 +03:00 [DBG] Attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest' using the name '' in request data ...
+2024-08-14 01:56:15.218 +03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-08-14 01:56:15.219 +03:00 [DBG] Connection id "0HN5RTBIP2IGR", Request id "0HN5RTBIP2IGR:00000019": started reading request body.
+2024-08-14 01:56:15.220 +03:00 [DBG] Connection id "0HN5RTBIP2IGR", Request id "0HN5RTBIP2IGR:00000019": done reading request body.
+2024-08-14 01:56:15.222 +03:00 [DBG] JSON input formatter succeeded, deserializing to type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest'
+2024-08-14 01:56:15.223 +03:00 [DBG] Done attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest'.
+2024-08-14 01:56:15.224 +03:00 [DBG] Done attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest'.
+2024-08-14 01:56:15.225 +03:00 [DBG] Attempting to validate the bound parameter 'payload' of type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest' ...
+2024-08-14 01:56:15.227 +03:00 [DBG] Done attempting to validate the bound parameter 'payload' of type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest'.
+2024-08-14 01:56:15.229 +03:00 [INF] AppUserController-CreateAsync request worked: DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest
+2024-08-14 01:56:15.233 +03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2024-08-14 01:56:15.235 +03:00 [DBG] Compiling query expression: 
+'DbSet<AppUser>()
+    .Any(x => x.Email == __request_Email_0 && x.StatusId != -1)'
+2024-08-14 01:56:15.240 +03:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleAsync<bool>(
+    asyncEnumerable: new SingleQueryingEnumerable<bool>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> 0
+            SELECT EXISTS (
+                SELECT 1
+                FROM AppUsers AS a
+                WHERE (a.Email == @__request_Email_0) && (a.StatusId != -1))), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+        DotnetCase.Data.Contexts.ApplicationDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-08-14 01:56:15.250 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:56:15.251 +03:00 [DBG] Creating DbConnection.
+2024-08-14 01:56:15.251 +03:00 [DBG] Created DbConnection. (0ms).
+2024-08-14 01:56:15.252 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2024-08-14 01:56:15.252 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2024-08-14 01:56:15.253 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:15.254 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:15.256 +03:00 [DBG] Executing DbCommand [Parameters=[@__request_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a]
+        WHERE [a].[Email] = @__request_Email_0 AND [a].[StatusId] <> -1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-08-14 01:56:15.260 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a]
+        WHERE [a].[Email] = @__request_Email_0 AND [a].[StatusId] <> -1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-08-14 01:56:15.264 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:15.265 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 3ms reading results.
+2024-08-14 01:56:15.265 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:15.266 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (0ms).
+2024-08-14 01:56:15.305 +03:00 [DBG] User validation failed: InvalidUserName.
+2024-08-14 01:56:15.306 +03:00 [ERR] This is an error at CreateAsync Service
+2024-08-14 01:56:15.307 +03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-14 01:56:15.308 +03:00 [DBG] No information found on request to perform content negotiation.
+2024-08-14 01:56:15.309 +03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-14 01:56:15.309 +03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-14 01:56:15.309 +03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-14 01:56:15.310 +03:00 [INF] Executing UnprocessableEntityObjectResult, writing value of type 'Microsoft.AspNetCore.Identity.IdentityResult'.
+2024-08-14 01:56:15.312 +03:00 [INF] Executed action DotnetCase.API.Controllers.api.v1.AppUserController.CreateAsync (DotnetCase.API) in 99.4178ms
+2024-08-14 01:56:15.314 +03:00 [INF] Executed endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.CreateAsync (DotnetCase.API)'
+2024-08-14 01:56:15.315 +03:00 [DBG] 'ApplicationDbContext' disposed.
+2024-08-14 01:56:15.319 +03:00 [DBG] Disposing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:15.324 +03:00 [DBG] Disposed connection to database '' on server '' (4ms).
+2024-08-14 01:56:15.325 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/v1/users/create - 422 null application/json; charset=utf-8 130.6835ms
+2024-08-14 01:56:33.076 +03:00 [INF] Request starting HTTP/2 POST https://localhost:7175/api/v1/users/create - application/json 77
+2024-08-14 01:56:33.080 +03:00 [DBG] 1 candidate(s) found for the request path '/api/v1/users/create'
+2024-08-14 01:56:33.081 +03:00 [DBG] Endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.CreateAsync (DotnetCase.API)' with route pattern 'api/v1/users/create' is valid for the request path '/api/v1/users/create'
+2024-08-14 01:56:33.082 +03:00 [DBG] Request matched endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.CreateAsync (DotnetCase.API)'
+2024-08-14 01:56:33.084 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:56:33.085 +03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-14 01:56:33.085 +03:00 [DBG] The request has an origin header: 'https://localhost:7175'.
+2024-08-14 01:56:33.086 +03:00 [INF] CORS policy execution successful.
+2024-08-14 01:56:33.087 +03:00 [INF] Executing endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.CreateAsync (DotnetCase.API)'
+2024-08-14 01:56:33.088 +03:00 [INF] Route matched with {action = "Create", controller = "AppUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CreateAsync(DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest) on controller DotnetCase.API.Controllers.api.v1.AppUserController (DotnetCase.API).
+2024-08-14 01:56:33.090 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-14 01:56:33.091 +03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-14 01:56:33.093 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2024-08-14 01:56:33.094 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-14 01:56:33.096 +03:00 [DBG] Execution plan of result filters (in the following order): ["None"]
+2024-08-14 01:56:33.097 +03:00 [DBG] Executing controller factory for controller DotnetCase.API.Controllers.api.v1.AppUserController (DotnetCase.API)
+2024-08-14 01:56:33.100 +03:00 [DBG] Executed controller factory for controller DotnetCase.API.Controllers.api.v1.AppUserController (DotnetCase.API)
+2024-08-14 01:56:33.101 +03:00 [DBG] Attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest' ...
+2024-08-14 01:56:33.103 +03:00 [DBG] Attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest' using the name '' in request data ...
+2024-08-14 01:56:33.104 +03:00 [DBG] Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2024-08-14 01:56:33.105 +03:00 [DBG] Connection id "0HN5RTBIP2IGR", Request id "0HN5RTBIP2IGR:0000001B": started reading request body.
+2024-08-14 01:56:33.106 +03:00 [DBG] Connection id "0HN5RTBIP2IGR", Request id "0HN5RTBIP2IGR:0000001B": done reading request body.
+2024-08-14 01:56:33.107 +03:00 [DBG] JSON input formatter succeeded, deserializing to type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest'
+2024-08-14 01:56:33.107 +03:00 [DBG] Done attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest'.
+2024-08-14 01:56:33.108 +03:00 [DBG] Done attempting to bind parameter 'payload' of type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest'.
+2024-08-14 01:56:33.109 +03:00 [DBG] Attempting to validate the bound parameter 'payload' of type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest' ...
+2024-08-14 01:56:33.109 +03:00 [DBG] Done attempting to validate the bound parameter 'payload' of type 'DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest'.
+2024-08-14 01:56:33.110 +03:00 [INF] AppUserController-CreateAsync request worked: DotnetCase.Business.Models.Requests.AppUser.UserCreateRequest
+2024-08-14 01:56:33.111 +03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2024-08-14 01:56:33.113 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:56:33.113 +03:00 [DBG] Creating DbConnection.
+2024-08-14 01:56:33.114 +03:00 [DBG] Created DbConnection. (0ms).
+2024-08-14 01:56:33.114 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (1ms).
+2024-08-14 01:56:33.115 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (2ms).
+2024-08-14 01:56:33.116 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.116 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.117 +03:00 [DBG] Executing DbCommand [Parameters=[@__request_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a]
+        WHERE [a].[Email] = @__request_Email_0 AND [a].[StatusId] <> -1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-08-14 01:56:33.121 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__request_Email_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [AppUsers] AS [a]
+        WHERE [a].[Email] = @__request_Email_0 AND [a].[StatusId] <> -1) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2024-08-14 01:56:33.122 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.123 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 0ms reading results.
+2024-08-14 01:56:33.124 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.124 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (0ms).
+2024-08-14 01:56:33.128 +03:00 [DBG] Compiling query expression: 
+'DbSet<AppUser>()
+    .FirstOrDefault(u => u.NormalizedUserName == __normalizedUserName_0)'
+2024-08-14 01:56:33.132 +03:00 [DBG] Generated query execution expression: 
+'queryContext => ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync<AppUser>(
+    asyncEnumerable: new SingleQueryingEnumerable<AppUser>(
+        (RelationalQueryContext)queryContext, 
+        RelationalCommandCache.QueryExpression(
+            Projection Mapping:
+                EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: AppUser.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: AppUser.AccessFailedCount (int) Required, 1], [Property: AppUser.ConcurrencyStamp (string) Concurrency, 2], [Property: AppUser.CreatedBy (Guid) Required, 3], [Property: AppUser.CreatedOn (DateTime) Required, 4], [Property: AppUser.Email (string) MaxLength(256), 5], [Property: AppUser.EmailConfirmed (bool) Required, 6], [Property: AppUser.LockoutEnabled (bool) Required, 7], [Property: AppUser.LockoutEnd (DateTimeOffset?), 8], [Property: AppUser.ModifiedBy (Guid) Required, 9], [Property: AppUser.ModifiedOn (DateTime) Required, 10], [Property: AppUser.NormalizedEmail (string) Index MaxLength(256), 11], [Property: AppUser.NormalizedUserName (string) Index MaxLength(256), 12], [Property: AppUser.PasswordHash (string), 13], [Property: AppUser.PhoneNumber (string), 14], [Property: AppUser.PhoneNumberConfirmed (bool) Required, 15], [Property: AppUser.SecurityStamp (string), 16], [Property: AppUser.StatusId (int) Required, 17], [Property: AppUser.TwoFactorEnabled (bool) Required, 18], [Property: AppUser.UserName (string) MaxLength(256), 19] }
+            SELECT TOP(1) a.Id, a.AccessFailedCount, a.ConcurrencyStamp, a.CreatedBy, a.CreatedOn, a.Email, a.EmailConfirmed, a.LockoutEnabled, a.LockoutEnd, a.ModifiedBy, a.ModifiedOn, a.NormalizedEmail, a.NormalizedUserName, a.PasswordHash, a.PhoneNumber, a.PhoneNumberConfirmed, a.SecurityStamp, a.StatusId, a.TwoFactorEnabled, a.UserName
+            FROM AppUsers AS a
+            WHERE a.NormalizedUserName == @__normalizedUserName_0), 
+        null, 
+        Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, AppUser>, 
+        DotnetCase.Data.Contexts.ApplicationDbContext, 
+        False, 
+        False, 
+        True
+    ), 
+    cancellationToken: queryContext.CancellationToken)'
+2024-08-14 01:56:33.135 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:56:33.135 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-14 01:56:33.136 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2024-08-14 01:56:33.137 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.138 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.140 +03:00 [DBG] Executing DbCommand [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedBy], [a].[ModifiedOn], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StatusId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AppUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-14 01:56:33.144 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__normalizedUserName_0='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedBy], [a].[ModifiedOn], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StatusId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AppUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @__normalizedUserName_0
+2024-08-14 01:56:33.145 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.147 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 1ms reading results.
+2024-08-14 01:56:33.148 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.149 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (0ms).
+2024-08-14 01:56:33.157 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'AppUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:56:33.158 +03:00 [DBG] SaveChanges starting for 'ApplicationDbContext'.
+2024-08-14 01:56:33.159 +03:00 [DBG] DetectChanges starting for 'ApplicationDbContext'.
+2024-08-14 01:56:33.159 +03:00 [DBG] DetectChanges completed for 'ApplicationDbContext'.
+2024-08-14 01:56:33.161 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.162 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.164 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:56:33.164 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-14 01:56:33.166 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2024-08-14 01:56:33.167 +03:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Guid), @p10='?' (DbType = DateTime2), @p11='?' (Size = 256), @p12='?' (Size = 256), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 4000), @p17='?' (DbType = Int32), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [CreatedBy], [CreatedOn], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [ModifiedBy], [ModifiedOn], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [StatusId], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19);
+2024-08-14 01:56:33.173 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?' (DbType = Int32), @p2='?' (Size = 4000), @p3='?' (DbType = Guid), @p4='?' (DbType = DateTime2), @p5='?' (Size = 256), @p6='?' (DbType = Boolean), @p7='?' (DbType = Boolean), @p8='?' (DbType = DateTimeOffset), @p9='?' (DbType = Guid), @p10='?' (DbType = DateTime2), @p11='?' (Size = 256), @p12='?' (Size = 256), @p13='?' (Size = 4000), @p14='?' (Size = 4000), @p15='?' (DbType = Boolean), @p16='?' (Size = 4000), @p17='?' (DbType = Int32), @p18='?' (DbType = Boolean), @p19='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AppUsers] ([Id], [AccessFailedCount], [ConcurrencyStamp], [CreatedBy], [CreatedOn], [Email], [EmailConfirmed], [LockoutEnabled], [LockoutEnd], [ModifiedBy], [ModifiedOn], [NormalizedEmail], [NormalizedUserName], [PasswordHash], [PhoneNumber], [PhoneNumberConfirmed], [SecurityStamp], [StatusId], [TwoFactorEnabled], [UserName])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12, @p13, @p14, @p15, @p16, @p17, @p18, @p19);
+2024-08-14 01:56:33.174 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.175 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 0ms reading results.
+2024-08-14 01:56:33.176 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.176 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (0ms).
+2024-08-14 01:56:33.177 +03:00 [DBG] An entity of type 'AppUser' tracked by 'ApplicationDbContext' changed state from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:56:33.178 +03:00 [DBG] SaveChanges completed for 'ApplicationDbContext' with 1 entities written to the database.
+2024-08-14 01:56:33.181 +03:00 [INF] CreateAsync Service operation was successfully completed.
+2024-08-14 01:56:33.182 +03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-14 01:56:33.183 +03:00 [DBG] No information found on request to perform content negotiation.
+2024-08-14 01:56:33.183 +03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-14 01:56:33.184 +03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-14 01:56:33.184 +03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-14 01:56:33.185 +03:00 [INF] Executing OkObjectResult, writing value of type 'Microsoft.AspNetCore.Identity.IdentityResult'.
+2024-08-14 01:56:33.185 +03:00 [INF] Executed action DotnetCase.API.Controllers.api.v1.AppUserController.CreateAsync (DotnetCase.API) in 88.2494ms
+2024-08-14 01:56:33.186 +03:00 [INF] Executed endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.CreateAsync (DotnetCase.API)'
+2024-08-14 01:56:33.187 +03:00 [DBG] 'ApplicationDbContext' disposed.
+2024-08-14 01:56:33.188 +03:00 [DBG] Disposing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:33.190 +03:00 [DBG] Disposed connection to database '' on server '' (2ms).
+2024-08-14 01:56:33.192 +03:00 [INF] Request finished HTTP/2 POST https://localhost:7175/api/v1/users/create - 200 null application/json; charset=utf-8 115.4083ms
+2024-08-14 01:56:57.543 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/v1/users/C0D490CE-FC53-40F7-A875-6381223DECD2/activities - null null
+2024-08-14 01:56:57.548 +03:00 [DBG] 1 candidate(s) found for the request path '/api/v1/users/C0D490CE-FC53-40F7-A875-6381223DECD2/activities'
+2024-08-14 01:56:57.549 +03:00 [DBG] Endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.GetUserActivitiesAsync (DotnetCase.API)' with route pattern 'api/v1/users/{userId}/activities' is valid for the request path '/api/v1/users/C0D490CE-FC53-40F7-A875-6381223DECD2/activities'
+2024-08-14 01:56:57.550 +03:00 [DBG] Request matched endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.GetUserActivitiesAsync (DotnetCase.API)'
+2024-08-14 01:56:57.550 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:56:57.551 +03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-14 01:56:57.551 +03:00 [INF] Executing endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.GetUserActivitiesAsync (DotnetCase.API)'
+2024-08-14 01:56:57.554 +03:00 [INF] Route matched with {action = "GetUserActivities", controller = "AppUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserActivitiesAsync(System.String) on controller DotnetCase.API.Controllers.api.v1.AppUserController (DotnetCase.API).
+2024-08-14 01:56:57.556 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-14 01:56:57.557 +03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-14 01:56:57.558 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2024-08-14 01:56:57.558 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-14 01:56:57.559 +03:00 [DBG] Execution plan of result filters (in the following order): ["None"]
+2024-08-14 01:56:57.560 +03:00 [DBG] Executing controller factory for controller DotnetCase.API.Controllers.api.v1.AppUserController (DotnetCase.API)
+2024-08-14 01:56:57.562 +03:00 [DBG] Executed controller factory for controller DotnetCase.API.Controllers.api.v1.AppUserController (DotnetCase.API)
+2024-08-14 01:56:57.563 +03:00 [DBG] Attempting to bind parameter 'userId' of type 'System.String' ...
+2024-08-14 01:56:57.565 +03:00 [DBG] Attempting to bind parameter 'userId' of type 'System.String' using the name 'userId' in request data ...
+2024-08-14 01:56:57.566 +03:00 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2024-08-14 01:56:57.567 +03:00 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2024-08-14 01:56:57.568 +03:00 [DBG] Attempting to validate the bound parameter 'userId' of type 'System.String' ...
+2024-08-14 01:56:57.569 +03:00 [DBG] Done attempting to validate the bound parameter 'userId' of type 'System.String'.
+2024-08-14 01:56:57.572 +03:00 [INF] AppUserController-GetUserActivitiesAsync request worked: C0D490CE-FC53-40F7-A875-6381223DECD2
+2024-08-14 01:56:57.575 +03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2024-08-14 01:56:57.576 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:56:57.577 +03:00 [DBG] Creating DbConnection.
+2024-08-14 01:56:57.578 +03:00 [DBG] Created DbConnection. (0ms).
+2024-08-14 01:56:57.579 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2024-08-14 01:56:57.580 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2024-08-14 01:56:57.581 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:57.582 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:57.582 +03:00 [DBG] Executing DbCommand [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedBy], [a].[ModifiedOn], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StatusId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AppUsers] AS [a]
+WHERE [a].[Id] = @__get_Item_0
+2024-08-14 01:56:57.586 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedBy], [a].[ModifiedOn], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StatusId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AppUsers] AS [a]
+WHERE [a].[Id] = @__get_Item_0
+2024-08-14 01:56:57.588 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'AppUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:56:57.589 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:57.590 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 2ms reading results.
+2024-08-14 01:56:57.591 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:57.591 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (0ms).
+2024-08-14 01:56:57.593 +03:00 [DBG] Compiling query expression: 
+'DbSet<Activity>()
+    .Where(x => x.AppUserId == __request_0 && Invoke(x => x.StatusId == 1, x))'
+2024-08-14 01:56:57.596 +03:00 [DBG] Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Activity>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.QueryExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Activity.Id (Guid) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Activity.ActivityType (int) Required, 1], [Property: Activity.AppUserId (Guid) Required FK Index, 2], [Property: Activity.CreatedBy (Guid) Required, 3], [Property: Activity.CreatedOn (DateTime) Required, 4], [Property: Activity.Description (string), 5], [Property: Activity.ModifiedBy (Guid) Required, 6], [Property: Activity.ModifiedOn (DateTime) Required, 7], [Property: Activity.StatusId (int) Required, 8] }
+        SELECT a.Id, a.ActivityType, a.AppUserId, a.CreatedBy, a.CreatedOn, a.Description, a.ModifiedBy, a.ModifiedOn, a.StatusId
+        FROM Activities AS a
+        WHERE (a.AppUserId == @__request_0) && (a.StatusId == 1)), 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Activity>, 
+    DotnetCase.Data.Contexts.ApplicationDbContext, 
+    False, 
+    False, 
+    True
+)'
+2024-08-14 01:56:57.597 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:56:57.598 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-14 01:56:57.598 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2024-08-14 01:56:57.599 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:57.600 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:57.600 +03:00 [DBG] Executing DbCommand [Parameters=[@__request_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ActivityType], [a].[AppUserId], [a].[CreatedBy], [a].[CreatedOn], [a].[Description], [a].[ModifiedBy], [a].[ModifiedOn], [a].[StatusId]
+FROM [Activities] AS [a]
+WHERE [a].[AppUserId] = @__request_0 AND [a].[StatusId] = 1
+2024-08-14 01:56:57.603 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ActivityType], [a].[AppUserId], [a].[CreatedBy], [a].[CreatedOn], [a].[Description], [a].[ModifiedBy], [a].[ModifiedOn], [a].[StatusId]
+FROM [Activities] AS [a]
+WHERE [a].[AppUserId] = @__request_0 AND [a].[StatusId] = 1
+2024-08-14 01:56:57.605 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:57.605 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 0ms reading results.
+2024-08-14 01:56:57.606 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:57.607 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (0ms).
+2024-08-14 01:56:57.608 +03:00 [INF] GetUserActivitiesAsync Service operation was successfully completed.
+2024-08-14 01:56:57.608 +03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-14 01:56:57.609 +03:00 [DBG] No information found on request to perform content negotiation.
+2024-08-14 01:56:57.610 +03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-14 01:56:57.610 +03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-14 01:56:57.611 +03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-14 01:56:57.613 +03:00 [INF] Executing OkObjectResult, writing value of type 'DotnetCase.Common.Entities.Common.DataResponse`1[[System.Collections.Generic.List`1[[DotnetCase.Data.Models.Activity, DotnetCase.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-14 01:56:57.614 +03:00 [INF] Executed action DotnetCase.API.Controllers.api.v1.AppUserController.GetUserActivitiesAsync (DotnetCase.API) in 53.7752ms
+2024-08-14 01:56:57.618 +03:00 [INF] Executed endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.GetUserActivitiesAsync (DotnetCase.API)'
+2024-08-14 01:56:57.620 +03:00 [DBG] 'ApplicationDbContext' disposed.
+2024-08-14 01:56:57.621 +03:00 [DBG] Disposing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:56:57.623 +03:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2024-08-14 01:56:57.624 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/v1/users/C0D490CE-FC53-40F7-A875-6381223DECD2/activities - 200 null application/json; charset=utf-8 80.881ms
+2024-08-14 01:57:14.100 +03:00 [INF] Request starting HTTP/2 GET https://localhost:7175/api/v1/users/c404a3ce-1719-4f3d-9f33-e10718167867/activities - null null
+2024-08-14 01:57:14.102 +03:00 [DBG] 1 candidate(s) found for the request path '/api/v1/users/c404a3ce-1719-4f3d-9f33-e10718167867/activities'
+2024-08-14 01:57:14.103 +03:00 [DBG] Endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.GetUserActivitiesAsync (DotnetCase.API)' with route pattern 'api/v1/users/{userId}/activities' is valid for the request path '/api/v1/users/c404a3ce-1719-4f3d-9f33-e10718167867/activities'
+2024-08-14 01:57:14.104 +03:00 [DBG] Request matched endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.GetUserActivitiesAsync (DotnetCase.API)'
+2024-08-14 01:57:14.105 +03:00 [DBG] AuthenticationScheme: Identity.Application was not authenticated.
+2024-08-14 01:57:14.106 +03:00 [DBG] Static files was skipped as the request already matched an endpoint.
+2024-08-14 01:57:14.107 +03:00 [INF] Executing endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.GetUserActivitiesAsync (DotnetCase.API)'
+2024-08-14 01:57:14.108 +03:00 [INF] Route matched with {action = "GetUserActivities", controller = "AppUser"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetUserActivitiesAsync(System.String) on controller DotnetCase.API.Controllers.api.v1.AppUserController (DotnetCase.API).
+2024-08-14 01:57:14.109 +03:00 [DBG] Execution plan of authorization filters (in the following order): ["None"]
+2024-08-14 01:57:14.110 +03:00 [DBG] Execution plan of resource filters (in the following order): ["None"]
+2024-08-14 01:57:14.111 +03:00 [DBG] Execution plan of action filters (in the following order): ["Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000)"]
+2024-08-14 01:57:14.112 +03:00 [DBG] Execution plan of exception filters (in the following order): ["None"]
+2024-08-14 01:57:14.113 +03:00 [DBG] Execution plan of result filters (in the following order): ["None"]
+2024-08-14 01:57:14.114 +03:00 [DBG] Executing controller factory for controller DotnetCase.API.Controllers.api.v1.AppUserController (DotnetCase.API)
+2024-08-14 01:57:14.116 +03:00 [DBG] Executed controller factory for controller DotnetCase.API.Controllers.api.v1.AppUserController (DotnetCase.API)
+2024-08-14 01:57:14.116 +03:00 [DBG] Attempting to bind parameter 'userId' of type 'System.String' ...
+2024-08-14 01:57:14.117 +03:00 [DBG] Attempting to bind parameter 'userId' of type 'System.String' using the name 'userId' in request data ...
+2024-08-14 01:57:14.118 +03:00 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2024-08-14 01:57:14.119 +03:00 [DBG] Done attempting to bind parameter 'userId' of type 'System.String'.
+2024-08-14 01:57:14.121 +03:00 [DBG] Attempting to validate the bound parameter 'userId' of type 'System.String' ...
+2024-08-14 01:57:14.122 +03:00 [DBG] Done attempting to validate the bound parameter 'userId' of type 'System.String'.
+2024-08-14 01:57:14.123 +03:00 [INF] AppUserController-GetUserActivitiesAsync request worked: c404a3ce-1719-4f3d-9f33-e10718167867
+2024-08-14 01:57:14.124 +03:00 [DBG] Entity Framework Core 7.0.0 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:7.0.0' with options: None
+2024-08-14 01:57:14.126 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:57:14.126 +03:00 [DBG] Creating DbConnection.
+2024-08-14 01:57:14.127 +03:00 [DBG] Created DbConnection. (0ms).
+2024-08-14 01:57:14.128 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (2ms).
+2024-08-14 01:57:14.129 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (3ms).
+2024-08-14 01:57:14.130 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:57:14.131 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:57:14.132 +03:00 [DBG] Executing DbCommand [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedBy], [a].[ModifiedOn], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StatusId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AppUsers] AS [a]
+WHERE [a].[Id] = @__get_Item_0
+2024-08-14 01:57:14.135 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedBy], [a].[CreatedOn], [a].[Email], [a].[EmailConfirmed], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[ModifiedBy], [a].[ModifiedOn], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[StatusId], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AppUsers] AS [a]
+WHERE [a].[Id] = @__get_Item_0
+2024-08-14 01:57:14.137 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'AppUser' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:57:14.138 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:57:14.139 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 1ms reading results.
+2024-08-14 01:57:14.140 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:57:14.141 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (0ms).
+2024-08-14 01:57:14.142 +03:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2024-08-14 01:57:14.143 +03:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2024-08-14 01:57:14.143 +03:00 [DBG] Initialized DbCommand for 'ExecuteReader' (1ms).
+2024-08-14 01:57:14.145 +03:00 [DBG] Opening connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:57:14.146 +03:00 [DBG] Opened connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:57:14.146 +03:00 [DBG] Executing DbCommand [Parameters=[@__request_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ActivityType], [a].[AppUserId], [a].[CreatedBy], [a].[CreatedOn], [a].[Description], [a].[ModifiedBy], [a].[ModifiedOn], [a].[StatusId]
+FROM [Activities] AS [a]
+WHERE [a].[AppUserId] = @__request_0 AND [a].[StatusId] = 1
+2024-08-14 01:57:14.149 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__request_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ActivityType], [a].[AppUserId], [a].[CreatedBy], [a].[CreatedOn], [a].[Description], [a].[ModifiedBy], [a].[ModifiedOn], [a].[StatusId]
+FROM [Activities] AS [a]
+WHERE [a].[AppUserId] = @__request_0 AND [a].[StatusId] = 1
+2024-08-14 01:57:14.152 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:57:14.153 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:57:14.154 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:57:14.156 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:57:14.157 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:57:14.158 +03:00 [DBG] Context 'ApplicationDbContext' started tracking 'Activity' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2024-08-14 01:57:14.159 +03:00 [DBG] Closing data reader to 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:57:14.159 +03:00 [DBG] A data reader for 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' is being disposed after spending 8ms reading results.
+2024-08-14 01:57:14.160 +03:00 [DBG] Closing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:57:14.161 +03:00 [DBG] Closed connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS' (1ms).
+2024-08-14 01:57:14.162 +03:00 [INF] GetUserActivitiesAsync Service operation was successfully completed.
+2024-08-14 01:57:14.163 +03:00 [DBG] List of registered output formatters, in the following order: ["Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter","Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter"]
+2024-08-14 01:57:14.164 +03:00 [DBG] No information found on request to perform content negotiation.
+2024-08-14 01:57:14.165 +03:00 [DBG] Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2024-08-14 01:57:14.165 +03:00 [DBG] Attempting to select the first formatter in the output formatters list which can write the result.
+2024-08-14 01:57:14.166 +03:00 [DBG] Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2024-08-14 01:57:14.166 +03:00 [INF] Executing OkObjectResult, writing value of type 'DotnetCase.Common.Entities.Common.DataResponse`1[[System.Collections.Generic.List`1[[DotnetCase.Data.Models.Activity, DotnetCase.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]], System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-08-14 01:57:14.167 +03:00 [INF] Executed action DotnetCase.API.Controllers.api.v1.AppUserController.GetUserActivitiesAsync (DotnetCase.API) in 53.0048ms
+2024-08-14 01:57:14.168 +03:00 [INF] Executed endpoint 'DotnetCase.API.Controllers.api.v1.AppUserController.GetUserActivitiesAsync (DotnetCase.API)'
+2024-08-14 01:57:14.169 +03:00 [DBG] 'ApplicationDbContext' disposed.
+2024-08-14 01:57:14.174 +03:00 [DBG] Disposing connection to database 'dotnetCase2' on server 'DESKTOP-HUNQENI\SQLEXPRESS'.
+2024-08-14 01:57:14.175 +03:00 [DBG] Disposed connection to database '' on server '' (1ms).
+2024-08-14 01:57:14.176 +03:00 [INF] Request finished HTTP/2 GET https://localhost:7175/api/v1/users/c404a3ce-1719-4f3d-9f33-e10718167867/activities - 200 null application/json; charset=utf-8 77.0164ms
