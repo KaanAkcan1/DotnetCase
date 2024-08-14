@@ -25,7 +25,12 @@ namespace DotnetCase.Business.Services
             _serviceProvider = serviceProvider;
         }
 
-
+        /// <summary>
+        /// A service used to record user activities.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentException"></exception>
         public async Task<DataResponse<Activity>> CreateAsync(ActivityCreateRequest request)
         {
             var result = new DataResponse<Activity>();
@@ -76,6 +81,11 @@ namespace DotnetCase.Business.Services
             return result;
         }
 
+        /// <summary>
+        /// A service that validates the request before starting the operations.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         private async Task<Response> ValidateBeforeCreate(ActivityCreateRequest request)
         {
             var result = new Response();
@@ -101,6 +111,12 @@ namespace DotnetCase.Business.Services
             return result;
         }
 
+
+        /// <summary>
+        /// A service that retrieves activities based on a specific user ID.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public DataResponse<List<Activity>> GetActivitiesFromUserId(Guid request)
         {
             var result = new DataResponse<List<Activity>>();
@@ -112,6 +128,12 @@ namespace DotnetCase.Business.Services
             return result;
         }
 
+
+        /// <summary>
+        /// A service that retrieves activities based on filters.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public DataResponse<List<Activity>> FindAll(ActivityFilterRequest request)
         {
             var result = new DataResponse<List<Activity>>();

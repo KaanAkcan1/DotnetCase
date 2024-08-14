@@ -8,6 +8,7 @@ namespace DotnetCase.Data.Mapping
     {
         public void Configure(EntityTypeBuilder<Activity> builder)
         {
+            //Tablolar arasında bağlantılar gerekli olduğu durumlar için ekledim. Db'de tablolar arasındaki bağımlılıklar pek önerilmiyor araştırmalarımda, yapmak da istemezdim. Ancak taskte istenilen bu bilgiyse diye ekledim.
             builder.HasOne<AppUser>(x => x.AppUser).WithMany(b => b.Activities).HasForeignKey(a => a.AppUserId).OnDelete(DeleteBehavior.NoAction);
 
             builder.HasIndex(x => x.AppUserId);

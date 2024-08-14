@@ -8,7 +8,7 @@ namespace DotnetCase.Data.Mapping
     {
         public void Configure(EntityTypeBuilder<AppUser> builder)
         {
-            builder.HasMany<Activity>(u => u.Activities).WithOne(a => a.AppUser).HasForeignKey(a => a.AppUserId).OnDelete(DeleteBehavior.NoAction);
+            //builder.HasMany<Activity>(u => u.Activities).WithOne(a => a.AppUser).HasForeignKey(a => a.AppUserId).OnDelete(DeleteBehavior.NoAction);
 
             builder.HasIndex(a => a.Id);
             

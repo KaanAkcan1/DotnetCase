@@ -19,7 +19,12 @@ namespace DotnetCase.Business.Services
             _userManager = userManager;
         }
 
-
+        /// <summary>
+        /// A service used to record users.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
+        /// <exception cref="ArgumentNullException"></exception>
         public async Task<IdentityResult> CreateAsync(UserCreateRequest request)
         {
             if (request == null) throw new ArgumentNullException(nameof(request));
@@ -51,6 +56,12 @@ namespace DotnetCase.Business.Services
 
         }
 
+
+        /// <summary>
+        /// A service that validates the request before starting the operations.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         private async Task<IdentityResult> ValidateBeforeCreateAsync(UserCreateRequest request)
         {
             if (string.IsNullOrWhiteSpace(request.Email?.Trim() ?? ""))
@@ -76,6 +87,12 @@ namespace DotnetCase.Business.Services
             return IdentityResult.Success;
         }
 
+
+        /// <summary>
+        /// A service that retrieves activities based on a specific user ID.
+        /// </summary>
+        /// <param name="request"></param>
+        /// <returns></returns>
         public async Task<DataResponse<List<Activity>>> GetUserActivitiesAsync(string request)
         {
             var result = new DataResponse<List<Activity>>();
