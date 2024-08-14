@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 Log.Logger = new LoggerConfiguration()
     .MinimumLevel.Debug()
     .WriteTo.Console()
-    .WriteTo.File("logs/dotnetcase-.txt", rollingInterval: RollingInterval.Day)
+    .WriteTo.File("logs/dotnetcase-.txt", rollingInterval: RollingInterval.Day) // Elk-stack yapýlabilir
     .CreateLogger();
 
 builder.Host.UseSerilog(); 
@@ -32,10 +32,10 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c =>
 {
     c.SwaggerDoc("v1", new OpenApiInfo { Title = "DotNetCase", Version = "v1" });
+    c.EnableAnnotations();
 });
 
 var app = builder.Build();
-
 
 app.UseSwagger();
 app.UseSwaggerUI();

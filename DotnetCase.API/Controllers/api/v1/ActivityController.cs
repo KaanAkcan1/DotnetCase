@@ -23,11 +23,11 @@ namespace DotnetCase.API.Controllers.api.v1
         /// <param name="payload"></param>
         /// <returns></returns>
         [HttpPost()]
-        public async Task<IActionResult> CreateAsync([FromBody] ActivityCreateRequest payload)
+        public async Task<IActionResult> CreateAsync([FromBody] ActivityCreateRequest request)
         {
-            _logger.LogInformation("ActivityController-CreateAsync request worked: {payload}", payload);
+            _logger.LogInformation("ActivityController-CreateAsync request worked: {request}", request);
 
-            var result = await _activityService.CreateAsync(payload);
+            var result = await _activityService.CreateAsync(request);
 
             if (!result.Success)
             {
@@ -47,11 +47,11 @@ namespace DotnetCase.API.Controllers.api.v1
         /// <param name="payload"></param>
         /// <returns></returns>
         [HttpGet()]
-        public IActionResult FindAll([FromQuery]ActivityFilterRequest payload)
+        public IActionResult FindAll([FromQuery]ActivityFilterRequest request)
         {
-            _logger.LogInformation("ActivityController-FindAll request worked: {payload}", payload);
+            _logger.LogInformation("ActivityController-FindAll request worked: {request}", request);
 
-            var result = _activityService.FindAll(payload);
+            var result = _activityService.FindAll(request);
 
             if (!result.Success)
             {

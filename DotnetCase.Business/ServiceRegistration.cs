@@ -25,8 +25,8 @@ namespace DotnetCase.Business
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
             services
-                .AddTransient<IAppUserService, AppUserService>()
-                .AddTransient<IActivityService, ActivityService>()
+                .AddScoped<IAppUserService, AppUserService>() 
+                .AddScoped<IActivityService, ActivityService>()
                 .AddScoped<UserLoginActivityStrategy>()
                 .AddScoped<PageViewActivityStrategy>()
                 .AddScoped<ExecuteOperationActivityStrategy>()

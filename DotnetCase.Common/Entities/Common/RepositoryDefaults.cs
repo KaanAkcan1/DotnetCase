@@ -15,6 +15,8 @@ namespace DotnetCase.Common.Entities.Common
 
         public const int AppSettingsPropertyValueId = 999999;
 
+        public const string identityTablesPrefix = "App";
+
         public static class UserId
         {
             public static readonly Guid SystemAdministrator = new Guid("99999999-9999-9999-9999-999999999999");

@@ -1,4 +1,5 @@
-﻿using DotnetCase.Data.Mapping;
+﻿using DotnetCase.Common.Entities.Common;
+using DotnetCase.Data.Mapping;
 using DotnetCase.Data.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -21,14 +22,14 @@ namespace DotnetCase.Data.Contexts
 
             base.OnModelCreating(modelBuilder);
 
-            const string identityTablesPrefix = "App";
+            //const string identityTablesPrefix = "App";
 
             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
                 var tableName = entityType.GetTableName();
                 if (tableName != null && tableName.StartsWith("AspNet"))
                 {
-                    entityType.SetTableName($"{identityTablesPrefix}" + tableName.Substring(6));
+                    entityType.SetTableName($"{RepositoryDefaults.identityTablesPrefix}" + tableName.Substring(6));
                 }
             }
 

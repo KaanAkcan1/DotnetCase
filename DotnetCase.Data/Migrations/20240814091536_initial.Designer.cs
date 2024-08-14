@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DotnetCase.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240813174205_202408132041")]
-    partial class _202408132041
+    [Migration("20240814091536_initial")]
+    partial class initial
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -47,7 +47,6 @@ namespace DotnetCase.Data.Migrations
                         .HasColumnOrder(203);
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("ModifiedBy")
@@ -64,7 +63,11 @@ namespace DotnetCase.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ActivityType");
+
                     b.HasIndex("AppUserId");
+
+                    b.HasIndex("CreatedOn");
 
                     b.ToTable("Activities", (string)null);
                 });
@@ -138,6 +141,8 @@ namespace DotnetCase.Data.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Id");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");

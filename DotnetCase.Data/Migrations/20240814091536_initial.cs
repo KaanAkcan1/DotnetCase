@@ -87,7 +87,7 @@ namespace DotnetCase.Data.Migrations
                     ModifiedOn = table.Column<DateTime>(type: "datetime2", nullable: false),
                     ModifiedBy = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ActivityType = table.Column<int>(type: "int", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     AppUserId = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
@@ -186,9 +186,19 @@ namespace DotnetCase.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_Activities_ActivityType",
+                table: "Activities",
+                column: "ActivityType");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Activities_AppUserId",
                 table: "Activities",
                 column: "AppUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Activities_CreatedOn",
+                table: "Activities",
+                column: "CreatedOn");
 
             migrationBuilder.CreateIndex(
                 name: "IX_AppRoleClaims_RoleId",
@@ -221,6 +231,11 @@ namespace DotnetCase.Data.Migrations
                 name: "EmailIndex",
                 table: "AppUsers",
                 column: "NormalizedEmail");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AppUsers_Id",
+                table: "AppUsers",
+                column: "Id");
 
             migrationBuilder.CreateIndex(
                 name: "UserNameIndex",

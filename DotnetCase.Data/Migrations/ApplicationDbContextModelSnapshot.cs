@@ -44,7 +44,6 @@ namespace DotnetCase.Data.Migrations
                         .HasColumnOrder(203);
 
                     b.Property<string>("Description")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("ModifiedBy")
@@ -61,7 +60,11 @@ namespace DotnetCase.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ActivityType");
+
                     b.HasIndex("AppUserId");
+
+                    b.HasIndex("CreatedOn");
 
                     b.ToTable("Activities", (string)null);
                 });
@@ -135,6 +138,8 @@ namespace DotnetCase.Data.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Id");
 
                     b.HasIndex("NormalizedEmail")
                         .HasDatabaseName("EmailIndex");
